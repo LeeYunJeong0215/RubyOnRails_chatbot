@@ -1,0 +1,11 @@
+<!-- 상태메시지 부분 -->
+<% if flash[:notice] %>
+<div class="alert alert-primary" role="alert">
+  <%= flash[:notice] %>
+</div>
+<!-- else를 쓰면 nil상태일때도 포함하므로 elsif를 써야 함. -->
+<% elsif flash[:alert] %>
+<div class="alert alert-danger" role="alert">
+  <%= flash[:alert] %>
+</div>
+<% end %>
